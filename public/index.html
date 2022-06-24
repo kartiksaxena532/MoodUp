@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodUp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../Music-code/music-styles.css">
+    <link rel="stylesheet" href="../Motivation-Code/motivation-styles.css">
+</head>
+
+<body>
+    <div class="full-page">
+        <nav>
+            <!-- <h1>MoodUp</h1> -->
+            <img src="img.jpeg" alt="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Fun</a></li>
+                <li><a href="#">Focus</a></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#">Goals</a></li>
+            </ul>
+        </nav>
+
+        <!-- About MoodUp  -->
+        <div class="text-area">
+            <h3 class="heading">Tired Up from working?</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, est repellendus delectus officiis in
+                minus perferendis cumque magni deleniti suscipit exercitationem dignissimos laboriosam neque placeat id
+                modi ratione fugiat. Accusamus!
+            </p>
+            <h1>MoodUp 🙌</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, illum, et accusamus vitae sapiente consequatur distinctio nam est libero velit vero repudiandae aut! Debitis in incidunt aut totam magnam iste.</p>
+            <img src="" alt="">
+        </div>
+
+        <!-- Songs section  -->
+        <div class="songs">
+            <h2>Cheer up by listening these songs</h2>
+            <div class="music-container">
+                <div class="music-info">
+                    <h4 id="title">Method Man</h4>
+                    <div class="progress-container">
+                        <div class="progress">
+
+                        </div>
+                    </div>
+                </div>
+
+                <audio src="music/Method-Man.mp3" id="audio"></audio>
+
+                <div class="img-container">
+                    <img src="images/Method-Man.jpg" alt="music-cover" id="cover">
+                </div>
+
+                <div class="navigation">
+                    <button id="prev" class="action-btn">
+                        <i class="fas fa-backward"></i>
+                    </button>
+                    <button id="play" class="action-btn action-btn-big">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button id="next" class="action-btn">
+                        <i class="fas fa-forward"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Relax Section  -->
+
+        <div class="relax">
+            <div>
+                <h2>Sleep</h2>
+                <iframe width="460" height="315" src="https://www.youtube.com/embed/y615vOsiG5w"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div>
+                <h2>Meditate</h2>
+                <iframe width="460" height="315" src="https://www.youtube.com/embed/aIIEI33EUqI"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Motivation Section  -->
+
+        <div class="motivate">
+            <div id="quote">
+                <button id="motivation">Today's quote</button>
+            </div>
+
+            <!-- Motivation Video Section -->
+            <div class="container">
+                <h1>Motivational videos</h1>
+                <div class="row">
+                    <div class="col">
+                        <div class="feature-img">
+                            <img src="images/pic1.png" width="100%">
+                            <img src="images/play.png" class="play-btn" onclick="playVideo('videos/video1.mp4')">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="small-img-row">
+                            <div class="small-img">
+                                <img src="images/pic2.png"">
+                                <img src=" images/play.png" class="play-btn" onclick="playVideo('videos/video2.mp4')">
+                            </div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing provident</p>
+                        </div>
+                        <div class="small-img-row">
+                            <div class="small-img">
+                                <img src="images/pic3.png"">
+                                <img src=" images/play.png" class="play-btn" onclick="playVideo('videos/video3.mp4')">
+                            </div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing provident</p>
+                        </div>
+                        <div class="small-img-row">
+                            <div class="small-img">
+                                <img src="images/pic4.png">
+                                <img src="images/play.png" class="play-btn" onclick="playVideo('videos/video4.mp4')">
+                            </div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing provident</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-player" id="video-player">
+                <video width="100%" controls autoplay id="myVideo">
+                    <source src="videos/video1.mp4" type="video/mp4">
+                </video>
+                <img src="images/close.png" class="close-btn" onclick="stopVideo()">
+            </div>
+        </div>
+
+        <!-- Daily Planner -->
+        <div class="daily-planner">
+            <div>
+                <h1 class="planner-heading">Daily Planner</h1>
+            </div>
+            <div class="main-container">
+                <div class="setting">
+                    <div>
+                        <label for="Name">Name:</label>
+                        <input type="text" name="Name" id="">
+                    </div>
+                    <div>
+                        <label for="Date">Date:</label>
+                        <input type="date" name="Date" id="">
+                    </div>
+                    <div class="clock">
+
+                    </div>
+                    <div class="mood">
+                        <h1>Mood Today</h1>
+                    </div>
+                    <div>
+                        To-do list
+                        <div></div>
+                    </div>
+                </div>
+
+                <div class="text-boxes">
+                    <form action="/" method="post">
+                        <textarea name="Goals" id="" cols="65" rows="10"></textarea>
+                        <textarea name="Meetings" id="" cols="65" rows="10"></textarea>
+                        <textarea name="Morning" id="" cols="65" rows="10"></textarea>
+                        <textarea name="Afternoon" id="" cols="65" rows="10"></textarea>
+                        <textarea name="Evening" id="" cols="65" rows="10"></textarea>
+                    </form>
+
+                </div>
+            </div>
+            <textarea name="" id="Notes" cols="145" rows="2" placeholder="Notes here..."></textarea>
+        </div>
+    </div>
+
+    <script>
+        const videoPlayer = document.getElementById('video-player');
+        const myVideo = document.getElementById("myVideo");
+
+        function stopVideo(){
+          console.log("clicked");
+          videoPlayer.style.display = "none";
+        }
+
+        function playVideo(file) {
+            myVideo.src = file;
+            videoPlayer.style.display = 'block';
+        }
+    </script>
+
+    <script src="../Music-code/music-script.js"></script>
+    <script src="../Motivation-Code/motivation-script.js"></script>
+</body>
+
+</html>
